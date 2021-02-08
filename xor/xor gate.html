@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/xor.css">
+
+</head>
+<body>
+
+<h2>Toggle Switch</h2>
+
+
+
+<label class="switch" onclick="box1()">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<label class="switch"  onclick="box2()">
+  <input type="checkbox" >
+  <span class="slider round"></span>
+</label>
+
+<div class="box" id="b1" ></div>
+<div class="box1" id="b2"></div> 
+
+</body>
+<script>
+    
+    document.getElementById("b1").style.display="none";
+document.getElementById("b2").style.display="none";
+var first=false;
+var second=false;
+
+function box1()
+{
+    first=true; 
+    switch1();
+}
+function box2()
+{
+    second=true; 
+    switch1();
+}
+
+
+function switch1()
+{
+    if((second==false) && (first==true))
+    {
+        document.getElementById("b1").style.display="block";
+        document.getElementById("b2").style.display="none";
+    }else
+    {
+        document.getElementById("b1").style.display="none";
+        document.getElementById("b2").style.display="block";
+    }
+}
+</script>
+</html> 
